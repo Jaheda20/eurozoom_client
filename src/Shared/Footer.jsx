@@ -1,7 +1,8 @@
 
 const Footer = () => {
     return (
-        <footer className="footer bg-base-200 text-base-content p-10">
+        <div className="flex items-center justify-center mx-auto bg-slate-300 border">
+            <footer className="footer max-w-7xl text-base-content p-10 w-full">
             <aside>
                 <svg
                     width="50"
@@ -17,9 +18,16 @@ const Footer = () => {
                 <p>
                     EuroZoom
                     <br />
-                    Providing reliable tech since 1992
+                    Providing reliable tech since 2024
                 </p>
             </aside>
+            <nav>
+                <h6 className="footer-title">Our Company</h6>
+                <a className="link link-hover">About us</a>
+                <a className="link link-hover">Contact</a>
+                <a className="link link-hover">Jobs</a>
+                <a className="link link-hover">Press kit</a>
+            </nav>
             <nav>
                 <h6 className="footer-title">Services</h6>
                 <a className="link link-hover">Branding</a>
@@ -27,13 +35,8 @@ const Footer = () => {
                 <a className="link link-hover">Marketing</a>
                 <a className="link link-hover">Advertisement</a>
             </nav>
-            <nav>
-                <h6 className="footer-title">Company</h6>
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
-                <a className="link link-hover">Jobs</a>
-                <a className="link link-hover">Press kit</a>
-            </nav>
+
+            
             <nav>
                 <h6 className="footer-title">Legal</h6>
                 <a className="link link-hover">Terms of use</a>
@@ -41,6 +44,9 @@ const Footer = () => {
                 <a className="link link-hover">Cookie policy</a>
             </nav>
         </footer>
+
+        </div>
+        
     );
 };
 

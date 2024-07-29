@@ -37,33 +37,18 @@ const Banner = () => {
 
     const controls1 = useAnimation();
     const controls2 = useAnimation();
-    const [isMounted, setIsMounted] = useState(false);
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
-        setIsMounted(true);
-    }, []);
-
-    const startAnimations = (controls) => {
-        if (isMounted) {
-            controls.start("hidden").then(() => {
-                controls.start("visible");
-            });
-        }
-    };
+        const controls = currentSlide === 0 ? controls1 : controls2;
+        controls.start("hidden").then(() => {
+            controls.start("visible");
+        });
+    }, [currentSlide, controls1, controls2]);
 
     const handleSlideChange = (swiper) => {
-        if (swiper.realIndex === 0) {
-            startAnimations(controls1);
-        } else {
-            startAnimations(controls2);
-        }
+        setCurrentSlide(swiper.realIndex);
     };
-
-    useEffect(() => {
-        if (isMounted) {
-            startAnimations(controls1); // Start animations for the first slide on mount
-        }
-    }, [isMounted, controls1]);
 
     
     return (
@@ -86,7 +71,7 @@ const Banner = () => {
                         <div className="absolute flex items-end justify-center w-full h-full bg-gradient-to-t from-[#151515] to-[rgba(21, 21, 21, 0)">
                             <div className="text-white pl-20 space-y-4 flex flex-col items-center justify-center text-center pb-24">
                                 
-                                <h1 className="text-4xl md:text-8xl mb-2">
+                                <h1 className="text-5xl md:text-8xl mb-2">
                                     {text.split("").map((char, index) => (
                                         <motion.span
                                             key={index}
@@ -109,7 +94,7 @@ const Banner = () => {
                                     initial="hidden"
                                     animate={controls1}
                                     variants={paragraphAnimation}
-                                    className="text-xl text-white"
+                                    className="md:text-xl text-white"
                                 >
                                     Making Every Journey across Europe Effortlessly Smooth and Exciting!
                                 </motion.p>
@@ -124,7 +109,7 @@ const Banner = () => {
                         <div className="absolute flex items-end justify-center w-full h-full bg-gradient-to-t from-[#151515] to-[rgba(21, 21, 21, 0)">
                             <div className="text-white pl-20 space-y-4 flex flex-col items-center justify-center text-center pb-24">
                                 
-                                <h1 className="text-4xl md:text-8xl mb-2">
+                                <h1 className="text-5xl md:text-8xl mb-2">
                                     {text.split("").map((char, index) => (
                                         <motion.span
                                             key={index}
@@ -147,7 +132,7 @@ const Banner = () => {
                                     initial="hidden"
                                     animate={controls2}
                                     variants={paragraphAnimation}
-                                    className="text-xl text-white"
+                                    className="md:text-xl text-white"
                                 >
                                     Making Every Journey across Europe Effortlessly Smooth and Exciting!
                                 </motion.p>
