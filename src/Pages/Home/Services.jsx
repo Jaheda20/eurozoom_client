@@ -1,4 +1,3 @@
-import deliveryImg from '/truck.jpg';
 import intImg from '/int.jpg';
 import fastImg from '/fast.jpg';
 import delImg from '/del.jpg';
@@ -10,6 +9,7 @@ const Services = () => {
             transform: scale(1);
           }
         `}
+        
     </style>
 
 
@@ -17,7 +17,8 @@ const Services = () => {
         <div className="max-w-7xl mx-auto flex flex-col w-full items-center my-20">
             <h3 className="font-extrabold text-lg text-blue-800">What we offer</h3>
             <h1 className="text-3xl lg:text-4xl font-bold mt-2 md:leading-9 text-slate-600">Tailored Transportation Solutions</h1>
-
+            <br />
+            <hr className='w-20 border-2 border-blue-700 animate-ping'/>
             <div className="mt-14 w-full grid md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center group">
                     <div className="relative p-4 bg-base-100 w-56 h-56 rounded-full flex items-center justify-center ">
