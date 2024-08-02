@@ -1,7 +1,7 @@
 
 const AboutDes = () => {
     return (
-        <div className="max-w-7xl w-full mx-auto mt-20 mb-32 flex flex-col md:flex-row justify-center gap-8">
+        <div className="max-w-7xl w-full mx-auto mt-20 mb-32 flex flex-col md:flex-row justify-center gap-16">
             <div className="md:w-1/2">
                 <img src="https://i.ibb.co/SN5XBXC/photo-1707905737794-3c8a06726b87-q-80-w-1470-auto-format-fit-crop-ixlib-rb-4-0.jpg" alt="" />
 

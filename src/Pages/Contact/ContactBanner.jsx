@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 const ContactBanner = () => {
     return (
@@ -30,7 +31,7 @@ const ContactBanner = () => {
                 backgroundPosition: 'center',
             }}
         >
-            <div className="hero-content text-neutral-content text-center">
+            <div className="hero-content text-neutral-content text-center flex flex-col">
                 <div className="max-w-md">
                     <h1 
                         className="mb-5 text-5xl md:text-7xl font-semibold"
@@ -43,6 +44,24 @@ const ContactBanner = () => {
                     >
                         Contact Us
                     </h1>
+                </div>
+                <div className="breadcrumbs text-xl">
+                    <ul>
+                        <li>
+                            <NavLink to="/" className={({ isActive }) =>
+                                `text-white ${isActive ? 'text-blue-300 font-bold' : 'text-white hover:text-gray-100'}`
+                            }>Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/contact" className={({ isActive }) =>
+                                `text-white ${isActive ? 'text-blue-300 font-bold' : 'text-white hover:text-gray-100'}`
+                            }>Contact
+                            </NavLink>
+                        </li>
+
+
+                    </ul>
                 </div>
             </div>
         </div>

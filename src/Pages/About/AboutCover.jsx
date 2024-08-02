@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 
 const AboutCover = () => {
     return (
@@ -11,19 +12,38 @@ const AboutCover = () => {
                 backgroundRepeat: 'no-repeat'
             }}
         >
-            <div className="hero-content text-neutral-content text-center">
+            <div className="hero-content text-neutral-content text-center flex flex-col">
                 <div className="max-w-md">
-                    <h1 
+                    <h1
                         className="mb-5 text-5xl md:text-7xl font-semibold"
-                        style={{ 
+                        style={{
                             display: 'inline-block',
-                            background: 'linear-gradient(to right, rgb(161, 206, 237), rgb(255, 255, 255))', 
-                            WebkitBackgroundClip: 'text', 
-                            WebkitTextFillColor: 'transparent' 
+                            background: 'linear-gradient(to right, rgb(161, 206, 237), rgb(255, 255, 255))',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent'
                         }}
                     >
                         About Us
                     </h1>
+
+                </div>
+                <div className="breadcrumbs text-xl">
+                    <ul>
+                        <li>
+                            <NavLink to="/" className={({ isActive }) =>
+                                `text-white ${isActive ? 'text-blue-300 font-bold' : 'text-white hover:text-gray-100'}`
+                            }>Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about" className={({ isActive }) =>
+                                `text-white ${isActive ? 'text-blue-300 font-bold' : 'text-white hover:text-gray-100'}`
+                            }>About
+                            </NavLink>
+                        </li>
+
+
+                    </ul>
                 </div>
             </div>
         </div>
