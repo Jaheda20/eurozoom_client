@@ -155,6 +155,11 @@ const Nav = () => {
                 </NavLink>
             </li>
             <li>
+                <NavLink to="/vehicles" className="nav-link text-white">
+                    Vehicles
+                </NavLink>
+            </li>
+            <li>
                 <NavLink to="/contact" className="nav-link text-white">
                     Contact
                 </NavLink>

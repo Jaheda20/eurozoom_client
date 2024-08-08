@@ -1,9 +1,21 @@
+import { useEffect, useState } from "react";
 import { FaCarSide, FaTractor, FaTruckMonster } from "react-icons/fa";
 import { TbBus } from "react-icons/tb";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
+import VehicleCard from "../../Components/Home/VehicleCard";
 
 const FeaturedProducts = () => {
+
+    const [vehicles, setVehicles] = useState([]);
+
+    useEffect(()=>{
+        fetch('/vehicle.json')
+        .then(res => res.json())
+        .then(data => setVehicles(data))
+    }, [])
+
+
     return (
         <div className="max-w-7xl mx-auto w-full mt-24 mb-20">
             <div className="w-full flex flex-col items-center justify-center ">
@@ -49,10 +61,58 @@ const FeaturedProducts = () => {
 
 
                 <TabPanel>
-                    <h2>Any content 1</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        {
+                            vehicles.filter(v => v.category === 'Car').
+                            map(vehicle=><VehicleCard 
+                            key={vehicle.id}
+                            vehicle={vehicle}
+                            >
+                            </VehicleCard>)
+                        }
+
+                    </div>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 2</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        {
+                            vehicles.filter(v => v.category === 'Construction').
+                            map(vehicle=><VehicleCard 
+                            key={vehicle.id}
+                            vehicle={vehicle}
+                            >
+                            </VehicleCard>)
+                        }
+
+                    </div>
+                </TabPanel>
+
+                <TabPanel>
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        {
+                            vehicles.filter(v => v.category === 'Truck').
+                            map(vehicle=><VehicleCard 
+                            key={vehicle.id}
+                            vehicle={vehicle}
+                            >
+                            </VehicleCard>)
+                        }
+
+                    </div>
+                </TabPanel>
+
+                <TabPanel>
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        {
+                            vehicles.filter(v => v.category === 'Bus').
+                            map(vehicle=><VehicleCard 
+                            key={vehicle.id}
+                            vehicle={vehicle}
+                            >
+                            </VehicleCard>)
+                        }
+
+                    </div>
                 </TabPanel>
             </Tabs>
 
