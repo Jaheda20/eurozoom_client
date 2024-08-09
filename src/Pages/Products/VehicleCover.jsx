@@ -23,7 +23,7 @@ const VehicleCover = () => {
                             WebkitTextFillColor: 'transparent'
                         }}
                     >
-                        About Us
+                        All Vehicles
                     </h1>
 
                 </div>
