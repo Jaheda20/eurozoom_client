@@ -4,15 +4,16 @@ import { TbBus } from "react-icons/tb";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
 import VehicleCard from "../../Components/Home/VehicleCard";
+import { Link } from "react-router-dom";
 
 const FeaturedProducts = () => {
 
     const [vehicles, setVehicles] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('/vehicle.json')
-        .then(res => res.json())
-        .then(data => setVehicles(data))
+            .then(res => res.json())
+            .then(data => setVehicles(data))
     }, [])
 
 
@@ -61,62 +62,72 @@ const FeaturedProducts = () => {
 
 
                 <TabPanel>
-                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {
                             vehicles.filter(v => v.category === 'Car').
-                            map(vehicle=><VehicleCard 
-                            key={vehicle.id}
-                            vehicle={vehicle}
-                            >
-                            </VehicleCard>)
+                                map(vehicle => <VehicleCard
+                                    key={vehicle.id}
+                                    vehicle={vehicle}
+                                >
+                                </VehicleCard>)
                         }
 
                     </div>
                 </TabPanel>
                 <TabPanel>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {
                             vehicles.filter(v => v.category === 'Construction').
-                            map(vehicle=><VehicleCard 
-                            key={vehicle.id}
-                            vehicle={vehicle}
-                            >
-                            </VehicleCard>)
+                                map(vehicle => <VehicleCard
+                                    key={vehicle.id}
+                                    vehicle={vehicle}
+                                >
+                                </VehicleCard>)
                         }
 
                     </div>
                 </TabPanel>
 
                 <TabPanel>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {
                             vehicles.filter(v => v.category === 'Truck').
-                            map(vehicle=><VehicleCard 
-                            key={vehicle.id}
-                            vehicle={vehicle}
-                            >
-                            </VehicleCard>)
+                                map(vehicle => <VehicleCard
+                                    key={vehicle.id}
+                                    vehicle={vehicle}
+                                >
+                                </VehicleCard>)
                         }
 
                     </div>
                 </TabPanel>
 
                 <TabPanel>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {
                             vehicles.filter(v => v.category === 'Bus').
-                            map(vehicle=><VehicleCard 
-                            key={vehicle.id}
-                            vehicle={vehicle}
-                            >
-                            </VehicleCard>)
+                                map(vehicle => <VehicleCard
+                                    key={vehicle.id}
+                                    vehicle={vehicle}
+                                >
+                                </VehicleCard>)
                         }
 
                     </div>
                 </TabPanel>
             </Tabs>
 
+            <div className="flex items-center justify-center my-20">
+                <Link to="/vehicles">
+                    <button className="relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-semibold text-lg text-white bg-blue-800 rounded-lg group">
+                        <span className="absolute left-0 w-0 h-full transition-all duration-500 ease-out bg-slate-600 group-hover:w-full "></span>
+                        <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
+                        <span className="relative flex items-center gap-2">
+                            Show all</span>
+                    </button>
 
+                </Link>
+            </div>
 
 
         </div>

@@ -1,163 +1,250 @@
 [
-    {
-      "id": 1,
-      "image": "https://i.ibb.co/0h11cqH/R1-RHEo7-PQh-Wrm-Ly02p-Ap.webp",
-      "name": "Model S",
-      "brand": "Tesla",
-      "price": 79999,
-      "location": "Berlin, Germany",
-      "category": "Car",
-      "features": [
-        "Height: 1440 mm",
-        "Length: 4970 mm",
-        "Width: 1964 mm",
-        "Mileage: 400 km",
-        "Operating Weight: 2200 kg",
-        "Load Weight: 500 kg",
-        "Total Weight: 2700 kg",
-        "Fuel: Electric",
-        "Gearbox: Automatic"
-      ]
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/0h11cqH/R1-RHEo7-PQh-Wrm-Ly02p-Ap.webp",
+    "name": "Model S",
+    "brand": "Tesla",
+    "price": 79999,
+    "location": "Berlin, Germany",
+    "category": "Car",
+    "year": 2022,
+    "engine": "Dual Motor",
+    "private_seller_info": {
+      "name": "John Doe",
+      "image": "https://example.com/seller1.jpg",
+      "email": "john.doe@example.com",
+      "phone_number": "+49 123 4567890"
     },
-    {
-      "id": 2,
-      "image": "https://i.ibb.co/8xz4bbH/photo-1661501315656-30e4496eeaad-q-80-w-1470-auto-format-fit-crop-ixlib-rb-4-0.jpg",
-      "name": "Civic EX",
-      "brand": "Honda",
-      "price": 23999,
-      "location": "Paris, France",
-      "category": "Car",
-      "features": [
-        "Height: 1435 mm",
-        "Length: 4640 mm",
-        "Width: 1799 mm",
-        "Mileage: 650 km",
-        "Operating Weight: 1300 kg",
-        "Load Weight: 300 kg",
-        "Total Weight: 1600 kg",
-        "Fuel: Gasoline",
-        "Gearbox: Manual"
-      ]
+    "interior": "Black Leather",
+    "exterior": "Red",
+    "stock_id": "TSLA12345",
+    "features": [
+      "Height: 1440 mm",
+      "Length: 4970 mm",
+      "Width: 1964 mm",
+      "Mileage: 400 km",
+      "Operating Weight: 2200 kg",
+      "Load Weight: 500 kg",
+      "Total Weight: 2700 kg",
+      "Fuel: Electric",
+      "Gearbox: Automatic"
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/8xz4bbH/photo-1661501315656-30e4496eeaad-q-80-w-1470-auto-format-fit-crop-ixlib-rb-4-0.jpg",
+    "name": "Civic EX",
+    "brand": "Honda",
+    "price": 23999,
+    "location": "Paris, France",
+    "category": "Car",
+    "year": 2020,
+    "engine": "2.0L I4",
+    "private_seller_info": {
+      "name": "Marie Dupont",
+      "image": "https://example.com/seller2.jpg",
+      "email": "marie.dupont@example.com",
+      "phone_number": "+33 1 23456789"
     },
-    {
-      "id": 3,
-      "image": "https://i.ibb.co/7bMBKQ9/2023-ram-heavy-duty-rebel.webp",
-      "name": "Ram 2500",
-      "brand": "Ram",
-      "price": 46999,
-      "location": "Warsaw, Poland",
-      "category": "Truck",
-      "features": [
-        "Height: 2000 mm",
-        "Length: 6200 mm",
-        "Width: 2500 mm",
-        "Mileage: 800 km",
-        "Operating Weight: 3500 kg",
-        "Load Weight: 1000 kg",
-        "Total Weight: 4500 kg",
-        "Fuel: Diesel",
-        "Gearbox: Automatic"
-      ]
+    "interior": "Gray Fabric",
+    "exterior": "Blue",
+    "stock_id": "HNDC45678",
+    "features": [
+      "Height: 1435 mm",
+      "Length: 4640 mm",
+      "Width: 1799 mm",
+      "Mileage: 650 km",
+      "Operating Weight: 1300 kg",
+      "Load Weight: 300 kg",
+      "Total Weight: 1600 kg",
+      "Fuel: Gasoline",
+      "Gearbox: Manual"
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/7bMBKQ9/2023-ram-heavy-duty-rebel.webp",
+    "name": "Ram 2500",
+    "brand": "Ram",
+    "price": 46999,
+    "location": "Warsaw, Poland",
+    "category": "Truck",
+    "year": 2021,
+    "engine": "6.7L Cummins I6",
+    "private_seller_info": {
+      "name": "Jan Kowalski",
+      "image": "https://example.com/seller3.jpg",
+      "email": "jan.kowalski@example.com",
+      "phone_number": "+48 12 3456789"
     },
-    {
-      "id": 4,
-      "image": "https://i.ibb.co/FWVQVnC/crawler-excavators-320d-caterpillar.jpg",
-      "name": "Cat 320D",
-      "brand": "Caterpillar",
-      "price": 789000,
-      "location": "Prague, Czech Republic",
-      "category": "Construction",
-      "features": [
-        "Height: 3120 mm",
-        "Length: 9300 mm",
-        "Width: 2950 mm",
-        "Mileage: 3000 km",
-        "Operating Weight: 22000 kg",
-        "Load Weight: 8000 kg",
-        "Total Weight: 30000 kg",
-        "Fuel: Diesel",
-        "Gearbox: Automatic"
-      ]
+    "interior": "Black Leather",
+    "exterior": "White",
+    "stock_id": "RAM78901",
+    "features": [
+      "Height: 2000 mm",
+      "Length: 6200 mm",
+      "Width: 2500 mm",
+      "Mileage: 800 km",
+      "Operating Weight: 3500 kg",
+      "Load Weight: 1000 kg",
+      "Total Weight: 4500 kg",
+      "Fuel: Diesel",
+      "Gearbox: Automatic"
+    ]
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/FWVQVnC/crawler-excavators-320d-caterpillar.jpg",
+    "name": "Cat 320D",
+    "brand": "Caterpillar",
+    "price": 789000,
+    "location": "Prague, Czech Republic",
+    "category": "Construction",
+    "year": 2019,
+    "engine": "C7.1 ACERT",
+    "private_seller_info": {
+      "name": "Petr Novak",
+      "image": "https://example.com/seller4.jpg",
+      "email": "petr.novak@example.com",
+      "phone_number": "+420 123 456 789"
     },
-    {
-      "id": 5,
-      "image": "https://americanbussales.net/wp-content/uploads/2023/05/3983-1-with-logo.jpg",
-      "name": "Bluebird Vision",
-      "brand": "Bluebird",
-      "price": 85999,
-      "location": "Dublin, Ireland",
-      "category": "Bus",
-      "features": [
-        "Height: 3200 mm",
-        "Length: 11000 mm",
-        "Width: 2500 mm",
-        "Mileage: 600 km",
-        "Operating Weight: 14000 kg",
-        "Load Weight: 5000 kg",
-        "Total Weight: 19000 kg",
-        "Fuel: Diesel",
-        "Gearbox: Automatic"
-      ]
+    "interior": "Standard",
+    "exterior": "Yellow",
+    "stock_id": "CAT320D",
+    "features": [
+      "Height: 3120 mm",
+      "Length: 9300 mm",
+      "Width: 2950 mm",
+      "Mileage: 3000 km",
+      "Operating Weight: 22000 kg",
+      "Load Weight: 8000 kg",
+      "Total Weight: 30000 kg",
+      "Fuel: Diesel",
+      "Gearbox: Automatic"
+    ]
+  },
+  {
+    "id": 5,
+    "image": "https://americanbussales.net/wp-content/uploads/2023/05/3983-1-with-logo.jpg",
+    "name": "Vision",
+    "brand": "Bluebird",
+    "price": 85999,
+    "location": "Dublin, Ireland",
+    "category": "Bus",
+    "year": 2020,
+    "engine": "6.7L Cummins I6",
+    "private_seller_info": {
+      "name": "Liam O'Connor",
+      "image": "https://example.com/seller5.jpg",
+      "email": "liam.oconnor@example.com",
+      "phone_number": "+353 1 234 5678"
     },
-    {
-      "id": 6,
-      "image": "https://www.trucknews.com/wp-content/uploads/2021/02/pete-1-1024x626.jpg",
-      "name": "Peterbilt 579",
-      "brand": "Peterbilt",
-      "price": 89999,
-      "location": "Oslo, Norway",
-      "category": "Truck",
-      "features": [
-        "Height: 3200 mm",
-        "Length: 6700 mm",
-        "Width: 2500 mm",
-        "Mileage: 900 km",
-        "Operating Weight: 4000 kg",
-        "Load Weight: 15000 kg",
-        "Total Weight: 19000 kg",
-        "Fuel: Diesel",
-        "Gearbox: Automatic"
-      ]
+    "interior": "Blue Fabric",
+    "exterior": "Yellow",
+    "stock_id": "BLB12345",
+    "features": [
+      "Height: 3200 mm",
+      "Length: 11000 mm",
+      "Width: 2500 mm",
+      "Mileage: 600 km",
+      "Operating Weight: 14000 kg",
+      "Load Weight: 5000 kg",
+      "Total Weight: 19000 kg",
+      "Fuel: Diesel",
+      "Gearbox: Automatic"
+    ]
+  },
+  {
+    "id": 6,
+    "image": "https://www.trucknews.com/wp-content/uploads/2021/02/pete-1-1024x626.jpg",
+    "name": "579",
+    "brand": "Peterbilt",
+    "price": 89999,
+    "location": "Oslo, Norway",
+    "category": "Truck",
+    "year": 2021,
+    "engine": "Paccar MX-13",
+    "private_seller_info": {
+      "name": "Olav Hansen",
+      "image": "https://example.com/seller6.jpg",
+      "email": "olav.hansen@example.com",
+      "phone_number": "+47 12 345 678"
     },
-    {
-      "id": 7,
-      "image": "https://www.australiahqj.com/wp-content/uploads/2021/04/New-Komatsu-D65EXhr-e1617917705615.jpg",
-      "name": "Komatsu D65",
-      "brand": "Komatsu",
-      "price": 689000,
-      "location": "Budapest, Hungary",
-      "category": "Construction",
-      "features": [
-        "Height: 3080 mm",
-        "Length: 8800 mm",
-        "Width: 3320 mm",
-        "Mileage: 4000 km",
-        "Operating Weight: 22000 kg",
-        "Load Weight: 10000 kg",
-        "Total Weight: 32000 kg",
-        "Fuel: Diesel",
-        "Gearbox: Automatic"
-      ]
+    "interior": "Gray Fabric",
+    "exterior": "Red",
+    "stock_id": "PET579",
+    "features": [
+      "Height: 3200 mm",
+      "Length: 6700 mm",
+      "Width: 2500 mm",
+      "Mileage: 900 km",
+      "Operating Weight: 4000 kg",
+      "Load Weight: 15000 kg",
+      "Total Weight: 19000 kg",
+      "Fuel: Diesel",
+      "Gearbox: Automatic"
+    ]
+  },
+  {
+    "id": 7,
+    "image": "https://www.australiahqj.com/wp-content/uploads/2021/04/New-Komatsu-D65EXhr-e1617917705615.jpg",
+    "name": "D65",
+    "brand": "Komatsu",
+    "price": 689000,
+    "location": "Budapest, Hungary",
+    "category": "Construction",
+    "year": 2018,
+    "engine": "SA6D125E-3",
+    "private_seller_info": {
+      "name": "Andras Toth",
+      "image": "https://example.com/seller7.jpg",
+      "email": "andras.toth@example.com",
+      "phone_number": "+36 1 234 5678"
     },
-    {
-     "id": 8,
-      "image": "https://i.ibb.co/XJhTyjz/Sprinter-Van-21-tiny-2048x0.jpg",
-      "name": "Mercedes-Benz Sprinter",
-      "brand": "Mercedes-Benz",
-      "price": 74999,
-      "location": "Athens, Greece",
-      "category": "Bus",
-      "features": [
-        "Height: 2800 mm",
-        "Length: 7000 mm",
-        "Width: 1990 mm",
-        "Mileage: 800 km",
-        "Operating Weight: 3500 kg",
-        "Load Weight: 1000 kg",
-        "Total Weight: 4500 kg",
-        "Fuel: Diesel",
-        "Gearbox: Automatic"
-      ]
-    }
-  ]
-  
+    "interior": "Standard",
+    "exterior": "Yellow",
+    "stock_id": "KOMD65",
+    "features": [
+      "Height: 3080 mm",
+      "Length: 8800 mm",
+      "Width: 3320 mm",
+      "Mileage: 4000 km",
+      "Operating Weight: 22000 kg",
+      "Load Weight: 10000 kg",
+      "Total Weight: 32000 kg",
+      "Fuel: Diesel",
+      "Gearbox: Automatic"
+    ]
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co/XJhTyjz/Sprinter-Van-21-tiny-2048x0.jpg",
+    "name": "Sprinter",
+    "brand": "Mercedes-Benz",
+    "price": 74999,
+    "location": "Athens, Greece",
+    "category": "Bus",
+    "year": 2021,
+    "engine": "2.1L I4",
+    "private_seller_info": {
+      "name": "Nikos Papadopoulos",
+      "image": "https://example.com/seller8.jpg",
+      "email": "nikos.papadopoulos@example.com",
+      "phone_number": "+30 21 1234567"
+    },
+    "interior": "Black Fabric",
+    "exterior": "White",
+    "stock_id": "MBS1234",
+    "features": [
+      "Height: 2800 mm",
+      "Length: 7000 mm",
+      "Width: 1990 mm",
+      "Mileage: 800 km",
+      "Operating Weight: 3500 kg",
+      "Load Weight: 1000 kg",
+      "Total Weight: 4500 kg",
+      "Fuel: Diesel",
+      "Gearbox: Automatic"
+    ]
+  }
+]
