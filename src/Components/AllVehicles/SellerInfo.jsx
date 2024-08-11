@@ -32,7 +32,7 @@ const SellerInfo = ({ vehicle }) => {
     const vehicleLocation = [vehicle.latitude || 51.505, vehicle.longitude || -0.09];
 
     return (
-        <div className="md:w-1/3 p-4 bg-slate-50 flex flex-col">
+        <div className="md:w-1/3 p-4 bg-slate-50 flex flex-col md:mt-20">
 
             <div className="flex gap-4">
                 <div className="avatar">
@@ -80,7 +80,7 @@ const SellerInfo = ({ vehicle }) => {
 
             </p>
             <div className="mt-6">
-                <MapContainer center={vehicleLocation} zoom={13} style={{ height: "300px", width: "100%" }}>
+                <MapContainer center={vehicleLocation} zoom={13} style={{ height: "600px", width: "100%" }}>
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

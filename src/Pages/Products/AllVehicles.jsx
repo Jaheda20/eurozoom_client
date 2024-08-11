@@ -15,10 +15,12 @@ const AllVehicles = () => {
     console.log(allVehicles)
 
     return (
-        <div className="max-w-7xl mx-auto w-full ">
-            <div className="flex flex-col items-center justify-center w-full text-center my-20">
-                <h3 className="font-extrabold text-lg text-blue-800 uppercase">Explore All Vehicles</h3>
-                <h1 className="text-3xl lg:text-5xl font-bold mt-6 md:leading-9 text-slate-600">Discover Our Full Range of Vehicles</h1>
+        <div className="max-w-7xl mx-auto w-full mt-20">          
+            <div className="w-full flex flex-col items-center justify-center mb-14">
+                <h3 className="font-extrabold text-lg text-blue-800">Explore All Vehicles</h3>
+                <h1 className="text-3xl lg:text-4xl font-bold mt-2 md:leading-9 text-slate-600">Discover Our Full Range of Vehicles</h1>
+                <br />
+                <hr className='w-20 border-2 border-blue-700 animate-ping' />
             </div>
 
             <div className="w-full md:flex gap-6">

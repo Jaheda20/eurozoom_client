@@ -1,13 +1,6 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Footer from "../../Shared/Footer";
 import DetailsNav from "./DetailsNav";
-import { MdEmail } from "react-icons/md";
-import { BsFillFuelPumpFill, BsTelephoneFill } from "react-icons/bs";
-import { FaCar, FaCarSide, FaRoad } from "react-icons/fa";
-import { VscLayoutSidebarLeft, VscLayoutSidebarRight } from "react-icons/vsc";
-import { PiEngineFill } from "react-icons/pi";
-import { SlCalender } from "react-icons/sl";
-import { FaGear } from "react-icons/fa6";
 import VehicleInfo from "../../Components/AllVehicles/VehicleInfo";
 import SellerInfo from "../../Components/AllVehicles/SellerInfo";
 
@@ -27,13 +20,22 @@ const VehicleDetails = () => {
                 }
                 `}
             </style>
+            
 
 
             <div>
                 <DetailsNav></DetailsNav>
 
                 <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row  mt-20 gap-10 ">
-                    <div className="md:w-2/3 p-4">
+
+                    <div className="md:w-2/3 p-4 md:p-0">
+                    <div className="breadcrumbs text-slate-500 mb-10">
+                            <ul>
+                                <li> <Link to={'/'}>Home</Link></li>
+                                <li><a>{vehicle.category}</a></li>
+                                <li>{vehicle.brand} {vehicle.name}</li>
+                            </ul>
+                        </div>                     
                         <div className="flex items-center justify-between mb-6">
                             <h1 className="text-blue-700 text-xl font-semibold">{vehicle.brand}
                                 <br />
@@ -44,29 +46,9 @@ const VehicleDetails = () => {
                         <img src={vehicle.image} alt="" className="w-full" />
 
                         <VehicleInfo vehicle={vehicle}></VehicleInfo>
-                        
+
                     </div>
                     <SellerInfo vehicle={vehicle}></SellerInfo>
-
-
-
-                    {/* <div className="md:w-1/3 bg-slate-100 p-4">
-                        <div className="flex gap-4">
-                            <div className="avatar">
-                                <div className="w-16 h-16 rounded-full">
-                                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                                </div>
-                            </div>
-                            <div>
-                                <h1 className="font-bold text-blue-700 text-lg ">{vehicle.private_seller_info?.name}</h1>
-                                <p className="mt-2 text-slate-500">Private Seller</p>
-                                <p className=" text-slate-500 flex items-center gap-2"><MdEmail />
-                                    {vehicle.private_seller_info?.email}</p>
-                                <p className=" text-slate-500 flex items-center gap-2"><BsTelephoneFill />
-                                    {vehicle.private_seller_info?.phone_number}</p>
-                            </div>
-                        </div>
-                    </div> */}
 
                 </div>
                 <Footer></Footer>
