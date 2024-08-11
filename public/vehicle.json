@@ -23,9 +23,9 @@
       "Length: 4970 mm",
       "Width: 1964 mm",
       "Mileage: 400 km",
-      "Operating Weight: 2200 kg",
-      "Load Weight: 500 kg",
-      "Total Weight: 2700 kg",
+      "Operating_Weight: 2200 kg",
+      "Load_Weight: 500 kg",
+      "Total_Weight: 2700 kg",
       "Fuel: Electric",
       "Gearbox: Automatic"
     ]
@@ -54,9 +54,9 @@
       "Length: 4640 mm",
       "Width: 1799 mm",
       "Mileage: 650 km",
-      "Operating Weight: 1300 kg",
-      "Load Weight: 300 kg",
-      "Total Weight: 1600 kg",
+      "Operating_Weight: 1300 kg",
+      "Load_Weight: 300 kg",
+      "Total_Weight: 1600 kg",
       "Fuel: Gasoline",
       "Gearbox: Manual"
     ]
@@ -85,9 +85,9 @@
       "Length: 6200 mm",
       "Width: 2500 mm",
       "Mileage: 800 km",
-      "Operating Weight: 3500 kg",
-      "Load Weight: 1000 kg",
-      "Total Weight: 4500 kg",
+      "Operating_Weight: 3500 kg",
+      "Load_Weight: 1000 kg",
+      "Total_Weight: 4500 kg",
       "Fuel: Diesel",
       "Gearbox: Automatic"
     ]
@@ -116,9 +116,9 @@
       "Length: 9300 mm",
       "Width: 2950 mm",
       "Mileage: 3000 km",
-      "Operating Weight: 22000 kg",
-      "Load Weight: 8000 kg",
-      "Total Weight: 30000 kg",
+      "Operating_Weight: 22000 kg",
+      "Load_Weight: 8000 kg",
+      "Total_Weight: 30000 kg",
       "Fuel: Diesel",
       "Gearbox: Automatic"
     ]
@@ -147,9 +147,9 @@
       "Length: 11000 mm",
       "Width: 2500 mm",
       "Mileage: 600 km",
-      "Operating Weight: 14000 kg",
-      "Load Weight: 5000 kg",
-      "Total Weight: 19000 kg",
+      "Operating_Weight: 14000 kg",
+      "Load_Weight: 5000 kg",
+      "Total_Weight: 19000 kg",
       "Fuel: Diesel",
       "Gearbox: Automatic"
     ]
@@ -178,9 +178,9 @@
       "Length: 6700 mm",
       "Width: 2500 mm",
       "Mileage: 900 km",
-      "Operating Weight: 4000 kg",
-      "Load Weight: 15000 kg",
-      "Total Weight: 19000 kg",
+      "Operating_Weight: 4000 kg",
+      "Load_Weight: 15000 kg",
+      "Total_Weight: 19000 kg",
       "Fuel: Diesel",
       "Gearbox: Automatic"
     ]
@@ -209,9 +209,9 @@
       "Length: 8800 mm",
       "Width: 3320 mm",
       "Mileage: 4000 km",
-      "Operating Weight: 22000 kg",
-      "Load Weight: 10000 kg",
-      "Total Weight: 32000 kg",
+      "Operating_Weight: 22000 kg",
+      "Load_Weight: 10000 kg",
+      "Total_Weight: 32000 kg",
       "Fuel: Diesel",
       "Gearbox: Automatic"
     ]
@@ -240,9 +240,9 @@
       "Length: 7000 mm",
       "Width: 1990 mm",
       "Mileage: 800 km",
-      "Operating Weight: 3500 kg",
-      "Load Weight: 1000 kg",
-      "Total Weight: 4500 kg",
+      "Operating_Weight: 3500 kg",
+      "Load_Weight: 1000 kg",
+      "Total_Weight: 4500 kg",
       "Fuel: Diesel",
       "Gearbox: Automatic"
     ]

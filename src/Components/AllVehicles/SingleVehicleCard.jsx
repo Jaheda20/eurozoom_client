@@ -2,6 +2,7 @@ import { BsFillFuelPumpFill } from "react-icons/bs";
 import { FaMapMarkerAlt, FaPhoneAlt, FaRoad } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { PiEngineFill, PiLineVerticalThin } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 
 const SingleVehicleCard = ({ vehicles }) => {
@@ -15,6 +16,7 @@ const SingleVehicleCard = ({ vehicles }) => {
                 }
                 `}
             </style>
+            <Link to={`/vehicle/${vehicles.id}`}>
             <div className="flex flex-col md:flex-row gap-4">
                 <div className="">
                     <img src={vehicles.image} alt="" className="md:w-64" />
@@ -26,7 +28,7 @@ const SingleVehicleCard = ({ vehicles }) => {
                             <br /> <span className="font-semibold text-slate-700 text-2xl"> {vehicles.name}</span>
                         </h1>
                         <div className="custom-shape bg-blue-700">
-                            <h2 className=" text-white font-bold px-6 py-2 text-center text-xl">SEK {vehicles.price}</h2>
+                            <h2 className=" text-slate-100 font-bold px-6 py-2 text-center text-xl">SEK {vehicles.price}</h2>
                         </div>
 
                     </div>
@@ -89,16 +91,12 @@ const SingleVehicleCard = ({ vehicles }) => {
                             </div>
 
                         </div>
-
-
-
-
                     </div>
 
                     {/* contact person */}
                     <div className="mt-8 flex gap-4">
                         <div className="avatar">
-                            <div className="w-16 h-16 rounded-full">
+                            <div className="w-12 h-12 rounded-full">
                                 <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                             </div>
                         </div>
@@ -123,6 +121,8 @@ const SingleVehicleCard = ({ vehicles }) => {
 
                 </div>
             </div>
+            </Link>
+            
             <div className="w-full my-12">
                 <div className="divider"></div>
             </div>
