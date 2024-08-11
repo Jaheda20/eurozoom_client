@@ -1,8 +1,22 @@
 import { useState } from "react";
 import { BsTelephoneFill } from "react-icons/bs";
-import { FaLocationArrow } from "react-icons/fa";
+import { FaLocationArrow, FaMapMarkerAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Link } from "react-router-dom";
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+// Fix for the default marker icon not showing up
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+    iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+    iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+    shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+});
+
+
 
 const SellerInfo = ({ vehicle }) => {
 
@@ -14,8 +28,11 @@ const SellerInfo = ({ vehicle }) => {
     }
     const maskedNumber = vehicle.private_seller_info?.phone_number.replace(/.(?=.{4})/g, '*');
 
+
+    const vehicleLocation = [vehicle.latitude || 51.505, vehicle.longitude || -0.09];
+
     return (
-        <div className="md:w-1/3 p-4 bg-yellow-300 flex flex-col">
+        <div className="md:w-1/3 p-4 bg-slate-50 flex flex-col">
 
             <div className="flex gap-4">
                 <div className="avatar">
@@ -27,8 +44,6 @@ const SellerInfo = ({ vehicle }) => {
                     <h1 className="font-bold text-blue-700 text-lg ">{vehicle.private_seller_info?.name}</h1>
                     <p className="mt-2 text-slate-500">Private Seller</p>
                     <div className="divider"></div>
-                    {/* <p className=" text-slate-500 flex items-center gap-2"><MdEmail />
-                        {vehicle.private_seller_info?.email}</p> */}
 
                 </div>
 
@@ -57,6 +72,26 @@ const SellerInfo = ({ vehicle }) => {
                 </p>
             </Link>
 
+            <p className="mt-20 text-blue-700 flex items-center gap-4 ">
+                <FaMapMarkerAlt size={24}/>
+                <span className="text-lg text-slate-500 font-bold">
+                    {vehicle.location}
+                </span>
+
+            </p>
+            <div className="mt-6">
+                <MapContainer center={vehicleLocation} zoom={13} style={{ height: "300px", width: "100%" }}>
+                    <TileLayer
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    />
+                    <Marker position={vehicleLocation}>
+                        <Popup>
+                            Vehicle Location
+                        </Popup>
+                    </Marker>
+                </MapContainer>
+            </div>
 
         </div>
     );
